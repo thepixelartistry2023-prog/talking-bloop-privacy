@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Talking Bloop</title>
+<style>
+  :root {
+    --ink: #17303f;
+    --muted: #5a7387;
+    --rule: #dbe6ee;
+    --accent: #0b7fa3;
+    --bg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e6f1f7; --muted: #9db4c4; --rule: #24404f;
+      --accent: #4ec7e8; --bg: #0d1b24;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; letter-spacing: -.01em; }
+  .updated { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  h2 {
+    font-size: 1.15rem; margin: 2.25rem 0 .6rem; padding-top: 1.25rem;
+    border-top: 1px solid var(--rule); letter-spacing: -.005em;
+  }
+  p, li { margin: 0 0 .9rem; }
+  ul { padding-left: 1.25rem; }
+  strong { font-weight: 650; }
+  code {
+    font: .875em ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: rgba(127, 159, 179, .16);
+    padding: .1em .35em; border-radius: 4px;
+  }
+  .lead { font-size: 1.05rem; }
+  table { border-collapse: collapse; width: 100%; margin: 0 0 1.1rem; font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: .6rem .7rem; border-bottom: 1px solid var(--rule); }
+  th { color: var(--muted); font-weight: 650; font-size: .82rem; text-transform: uppercase; letter-spacing: .05em; }
+  td:first-child { white-space: nowrap; padding-right: 1.5rem; }
+  @media (max-width: 34rem) {
+    td:first-child { white-space: normal; }
+    main { padding-top: 1.75rem; }
+  }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .875rem; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Privacy Policy — Talking Bloop</h1>
+<p class="updated">Last updated: 8 September 2026</p>
+
+<p class="lead">Talking Bloop is a toy. It does not have accounts, it does not
+have servers, and it does not send anything you do to anyone.</p>
+
+<h2>The short version</h2>
+<p>Everything the app records or remembers stays on your device. Nothing is
+uploaded, nothing is shared, and nothing is sold. There is no analytics, no
+advertising, and no tracking of any kind.</p>
+
+<h2>The microphone</h2>
+<p>Talking Bloop listens through your device's microphone so that Bloop can
+repeat what you say back to you in a silly voice. This is the whole point of
+the app.</p>
+
+<ul>
+  <li>Recording happens <strong>only while the app is open and in the
+    foreground.</strong> The app releases the microphone the moment you switch
+    away from it, and it does not record in the background.</li>
+  <li>Each recording is written to a temporary file in the app's private cache,
+    played back once, and <strong>deleted immediately afterwards.</strong></li>
+  <li>Recordings are <strong>never uploaded.</strong> The app contains no code
+    that sends audio anywhere, and makes no network requests of any kind.
+    <p style="margin:.6rem 0 0">The app does hold the Android internet
+    permission. It is added automatically by React Native, the framework the app
+    is built with, and is present in every app built that way. Nothing in
+    Talking Bloop uses it: there is no server, no account system, no analytics
+    and no advertising, so there is nothing for it to talk to.</p></li>
+  <li>Nothing is transcribed. The app does not use speech recognition and has no
+    idea what you said — it only measures how loud the sound is, so it knows
+    when you started and stopped talking.</li>
+</ul>
+
+<p>You can revoke microphone access at any time in your device's settings. The
+app will still open; Bloop simply will not be able to hear you.</p>
+
+<h2>What is stored on your device</h2>
+<p>The app keeps one small save file, in its own private storage, containing:</p>
+<ul>
+  <li>your level, experience and coins</li>
+  <li>how hungry Bloop is</li>
+  <li>your best scores and progress in the mini-games</li>
+</ul>
+<p>This never leaves your device. Uninstalling the app deletes it.</p>
+
+<h2>Children</h2>
+<p>Talking Bloop contains no advertising, no in-app purchases, no social
+features, no links out of the app, and no user-generated content that anyone
+else can see. Nothing is collected from anyone, of any age.</p>
+
+<h2>Permissions</h2>
+<table>
+  <thead>
+    <tr><th>Permission</th><th>Why</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Microphone<br><code>RECORD_AUDIO</code></td>
+      <td>So Bloop can hear you and repeat you back.</td>
+    </tr>
+    <tr>
+      <td>Modify audio settings<br><code>MODIFY_AUDIO_SETTINGS</code></td>
+      <td>To route playback through the speaker at a sensible volume.</td>
+    </tr>
+    <tr>
+      <td>Keep screen awake<br><code>WAKE_LOCK</code></td>
+      <td>So the screen does not dim while you are playing with Bloop.</td>
+    </tr>
+    <tr>
+      <td>Internet<br><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
+      <td>Declared by React Native, the framework the app is built with.
+        Talking Bloop does not use it — see the microphone section above.</td>
+    </tr>
+  </tbody>
+</table>
+<p>The app explicitly declines several permissions that libraries would otherwise
+request on its behalf — background recording, notifications, storage access and
+others — because it does not need them.</p>
+
+<h2>Changes</h2>
+<p>If this policy ever changes, the new version will be published at this address
+and the date at the top will be updated.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy can be sent to the developer at the contact
+address listed on the app's store page.</p>
+
+<footer>Talking Bloop · NextGen Wonders</footer>
+
+</main>
+</body>
+</html>
